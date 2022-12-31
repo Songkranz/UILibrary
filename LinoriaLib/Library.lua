@@ -15,6 +15,7 @@ ProtectGui(ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 ScreenGui.Parent = CoreGui;
+ScreenGui.Name = "Login"
 
 local Toggles = {};
 local Options = {};
