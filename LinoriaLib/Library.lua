@@ -1,3 +1,8 @@
+if game:GetService("CoreGui"):FindFirstChild("Login") then
+    game:GetService("CoreGui"):FindFirstChild("Login"):Destroy()
+end
+
+
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
 local TweenService = game:GetService('TweenService');
