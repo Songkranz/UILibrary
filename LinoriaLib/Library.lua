@@ -1,8 +1,3 @@
-if game:GetService("CoreGui"):FindFirstChild("Login") then
-    game:GetService("CoreGui"):FindFirstChild("Login"):Destroy()
-end
-
-
 local InputService = game:GetService('UserInputService');
 local TextService = game:GetService('TextService');
 local TweenService = game:GetService('TweenService');
@@ -20,7 +15,7 @@ ProtectGui(ScreenGui);
 
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global;
 ScreenGui.Parent = CoreGui;
-ScreenGui.Name = "Login"
+ScreenGui.Name = "Xlozt"
 
 local Toggles = {};
 local Options = {};
