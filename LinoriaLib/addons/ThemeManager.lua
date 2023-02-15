@@ -84,42 +84,6 @@ local ThemeManager = {} do
 		groupbox:AddLabel('Accent color'):AddColorPicker('AccentColor', { Default = self.Library.AccentColor });
 		groupbox:AddLabel('Outline color'):AddColorPicker('OutlineColor', { Default = self.Library.OutlineColor });
 		groupbox:AddLabel('Font color')	:AddColorPicker('FontColor', { Default = self.Library.FontColor });
-		groupbox:AddToggle('Rainbow', {
-        Text = 'Rainbow Accent Color',
-        Default = true,
-    })
-
-
-Toggles.Rainbow:OnChanged(function()
-        task.spawn(function()
-            while Toggles.Rainbow.Value do
-                task.wait()
-                local Registry = Window.Holder.Visible and Library.Registry or Library.HudRegistry
-
-                for Idx, Object in next, Library.Registry do
-                    for Property, ColorIdx in next, Object.Properties do
-                        if ColorIdx == 'AccentColor' or ColorIdx == 'AccentColorDark' then
-                            local Instance = Object.Instance
-                            local yPos = Instance.AbsolutePosition.Y
-
-                            local Mapped = Library:MapValue(yPos, 0, 1080, 0, 0.5) * 1.5
-                            local Color = Color3.fromHSV((Library.CurrentRainbowHue - Mapped) % 1, 0.8, 1)
-
-                            if ColorIdx == 'AccentColorDark' then
-                                Color = Library:GetDarkerColor(Color)
-                            end
-
-                            Instance[Property] = Color
-                        end
-                    end
-                end
-            end
-
-            if not Toggles.Rainbow.Value then
-                ThemeManager:UpdateTheme()
-            end
-        end)
-    end)
 
 		local ThemesArray = {}
 		for Name, Theme in next, self.BuiltInThemes do
