@@ -5,7 +5,7 @@ local ThemeManager = {} do
 
 	ThemeManager.Library = nil
 	ThemeManager.BuiltInThemes = {
-		['Xlozt Hub'] 		= { 1, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1e1e","AccentColor":"b9ebeb","BackgroundColor":"232323","OutlineColor":"141414"}') },
+		['Brown'] 		= { 1, httpService:JSONDecode('{"MainColor":"1e1e1e","AccentColor":"ffb265","OutlineColor":"141414","BackgroundColor":"232323","FontColor":"ffffff"}') },
 		['Black & White'] 	= { 2, httpService:JSONDecode('{"MainColor":"0c0c0e","AccentColor":"ffffff","OutlineColor":"323232","BackgroundColor":"0c0c0e","FontColor":"ffffff"}') },
 		['Dracula'] 		= { 3, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"232533","AccentColor":"6271a5","BackgroundColor":"1b1c27","OutlineColor":"7c82a7"}') },
 		['Bitch Bot'] 		= { 4, httpService:JSONDecode('{"FontColor":"ffffff","MainColor":"1e1e1e","AccentColor":"7e48a3","BackgroundColor":"232323","OutlineColor":"141414"}') },
